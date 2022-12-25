@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "frontend_web",
+      "program": "lib\\main.dart",
+      "cwd": "${workspaceFolder}\\frontend",
+      "deviceId": "chrome",
+      "args": ["--web-port", "5000", "-d", "chrome"],
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "frontend_android",
+      "program": "lib\\main.dart",
+      "cwd": "${workspaceFolder}\\frontend",
+      "deviceId": "android",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "frontend_ios",
+      "program": "lib\\main.dart",
+      "cwd": "${workspaceFolder}\\frontend",
+      "deviceId": "ios",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "backend_api",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}\\backend",
+      "args": ["--app-dir", "backend", "main:app", "--reload"],
+      "request": "launch",
+      "type": "python"
+    }
+  ]
+}
